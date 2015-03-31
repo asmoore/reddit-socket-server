@@ -34,6 +34,7 @@ def join(message):
 
 def server_backend():
     for comment in praw.helpers.comment_stream(r, subreddit):
+        print comment.author.name
         comment_dict = {"author": comment.author.name, 
                          "body": comment.body, 
                          "author_flair_css_class": comment.author_flair_css_class, 
