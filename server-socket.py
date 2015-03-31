@@ -69,5 +69,6 @@ if __name__ == '__main__':
     #if thread is None:
     #    print "start thread"
     thread = Thread(target=server_backend)
+    print thread
     thread.start()
     socketio.run(app)
