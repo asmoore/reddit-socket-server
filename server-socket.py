@@ -43,6 +43,7 @@ def server_backend():
                         "created_utc": "123123123", 
                         "emitted": "true",
                         "thread_id": "89dfsa"}
+        print comment_dict
         message = json.dumps({'message': comment_dict,'category':'comment', 'thread': 'asda'})
         socketio.emit('echo', message, room='2zeobb')
     
